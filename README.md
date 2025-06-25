@@ -1,2 +1,2 @@
 # Purpose
-Purpose Your Girl With Funny way 
+Purpose Your Girl In Funny way 
