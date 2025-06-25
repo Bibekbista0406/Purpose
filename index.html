@@ -14,7 +14,7 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
-            background-image: url('https://i.imgur.com/8N7F8Qx.jpg');
+            background-image: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             transition: background 1s ease;
@@ -34,6 +34,7 @@
             backdrop-filter: blur(5px);
         }
         
+        /* Rest of your CSS remains exactly the same */
         h1 {
             color: #e91e63;
             margin-bottom: 20px;
@@ -275,17 +276,15 @@
         
         // Auto-start music when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            bgMusic.volume = 0.5; // Set volume to 50%
+            bgMusic.volume = 0.5;
             bgMusic.play().then(() => {
                 musicPlaying = true;
                 musicControl.innerHTML = '<div class="music-note">🔊</div>';
             }).catch(e => {
                 console.log("Auto-play prevented:", e);
-                // If autoplay fails, require user interaction
                 musicControl.innerHTML = '<div class="music-note">🎵</div>';
                 musicPlaying = false;
                 
-                // Start music on first user interaction
                 const startMusicOnInteraction = () => {
                     bgMusic.play().then(() => {
                         musicPlaying = true;
@@ -317,8 +316,8 @@
             message.textContent = 'I Love You! 💖';
             celebrationDiv.appendChild(message);
             
-            // Change background
-            document.body.style.backgroundImage = 'url("https://i.imgur.com/JY5bHnB.jpg")';
+            // Change background to a reliable Unsplash image
+            document.body.style.backgroundImage = 'url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")';
             
             // Play celebration sound
             const cheerSound = new Audio('https://www.soundjay.com/human/sounds/applause-01.mp3');
